@@ -14,7 +14,8 @@ import Recruitment from './pages/Recruitment';
 import Signin from './pages/Signin';
 import Credits from './pages/Credits';
 import About from './pages/About';
-import Achievementss from './pages/Achievements'
+import Achievementss from './pages/Achievements';
+import Admin from './pages/Admin';
 function App() {
   return (
     <div className="App">
@@ -28,6 +29,7 @@ function App() {
         <Route path='/recruitment' element={<Recruitment/>} />
         <Route path='/Credits' element={<Credits />} />
         <Route path='/achievements' element={<Achievementss />} />
+        <Route path='/admin/*' element={<Admin />} />
         <Route path='/signin' element={<Signin/>} />
           
       </Routes>

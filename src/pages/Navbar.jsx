@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
+import krslogo from './krslogo.jpg';
+import menu from './menuicon.png';
 
 function Navbar() {
   const [visible, setVisible] = useState("right-[100%]")
@@ -14,14 +16,14 @@ function Navbar() {
   }
   return (
     <div>
-      <nav className="bg-gray-100">
+      <nav className="bg-gray-100 w-full sticky top-0 z-50">
         <div className="mx-auto px-6">
           <div className="flex justify-between">
             <div className="flex space-x-4">
               {/* logo */}
               <div>
                 <Link to="/" className="flex items-center py-5 px-2">
-                <img className="w-10 rounded-full ml-4 cursor-pointer" src="" alt="KRS" />
+                <img className="w-10 rounded-full ml-4 cursor-pointer" src={krslogo} alt="KRS" />
                 </Link>
               </div>
               {/* primary nav */}
@@ -33,6 +35,7 @@ function Navbar() {
                 <Link to="/credits" className="py-5 px-3 text-gray-700 hover:text-black hover:underline hover:underline-offset-2">Credits</Link>
                 <Link to="/recruitment" className="py-5 px-3 text-gray-700 hover:text-black hover:underline hover:underline-offset-2">Recruitment</Link>
                 <Link to="/achievements" className="py-5 px-3 text-gray-700 hover:text-black hover:underline hover:underline-offset-2">Achievements</Link>
+                <Link to="/admin" className="py-5 px-3 text-gray-700 hover:text-black hover:underline hover:underline-offset-2">Admin</Link>
               </div>
             </div>
             {/* secondary nav */}
@@ -42,7 +45,7 @@ function Navbar() {
             {/* mobile button goes here */}
             <div className="md:hidden flex items-center">
               <button className="mobile-menu-button" onClick={menuClick}>
-                <img className="w-6 cursor-pointer" src="" alt="menu" /> 
+                <img className="w-6 cursor-pointer" src={menu} alt="menu" /> 
               </button>
             </div>
 
