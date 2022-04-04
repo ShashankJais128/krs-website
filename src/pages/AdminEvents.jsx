@@ -1,6 +1,25 @@
 import React from 'react'
 import { Link } from "react-router-dom";
 
+const eventCard = [
+  {
+    name: "Robowar",
+    status: "registration open"
+  },
+  {
+    name: "Robocon",
+    status: "registration open"
+  },
+  {
+    name: "Robowar",
+    status: "registration open"
+  },
+  {
+    name: "Robocon",
+    status: "registration open"
+  }
+]
+
 function AdminEvents() {
   return (
     <div className="flex-1 my-12 mx-20 justify-center items-center">
@@ -36,17 +55,22 @@ function AdminEvents() {
             {/* cards */}
             <div className='py-4'>
               <div className="grid grid-cols-3">
-
-                <div className="border-2 my-2 mx-8 p-2 rounded-lg bg-white">
-                  <h2 className="">Shashank Jaiswal</h2> 
-                  <div className="flex justify-between">
-                    <h3 className="text-sm">2005405</h3>
-                    <div className="flex space-x-2">
-                      <Link className="" to=""><img src="" alt="dlt" /></Link>
-                      <Link className="" to=""><img src="" alt="edit" /></Link>
-                    </div>
-                  </div>
-                </div>
+              
+              {eventCard.map(event => {
+                  return (
+                    <div className="border-2 my-2 mx-8 p-2 rounded-lg bg-white">
+                      <h2 className="">{event.name}</h2> 
+                      <div className="flex justify-between">
+                        <h3 className="text-sm">{event.status}</h3>
+                        <div className="flex space-x-2">
+                          <Link className="" to=""><img src="" alt="dlt" /></Link>
+                          <Link className="" to=""><img src="" alt="edit" /></Link>
+                        </div>
+                      </div>
+                    </div>  
+                  )
+                  
+                })}
              
 
                 

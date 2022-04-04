@@ -15,7 +15,7 @@ function Navbar() {
     }
   }
   return (
-    <div>
+    <>
       <nav className="bg-gray-100 w-full sticky top-0 z-50">
         <div className="mx-auto px-6">
           <div className="flex justify-between">
@@ -153,7 +153,7 @@ function Navbar() {
           </Link>
         </div>
       </nav>
-    </div>
+    </>
   );
 }
 

@@ -6,7 +6,7 @@ import {
   Link
 } from "react-router-dom";
 import Contact from './pages/Contact';
-import Navbar from './pages/Navbar';
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Events from './pages/Events';
 import Members from './pages/Members';
