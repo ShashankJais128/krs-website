@@ -1,5 +1,4 @@
-
-import About from "./About";
+import Line from "./Line";
 function AboutText(props) {
   return (
     <div>
@@ -44,23 +43,25 @@ function AboutText(props) {
         </p>
       </div>
 
-    {props.Line}
+      <Line color="black"/>
 
       <div>
         <p>
           The primary objective of the society is to promote and empower
           research and development in robotics and all other trending technical
           fields.
-          </p>
-          <p> Robotics is an inter disciplinary field , so also ,we at KIIT
-          ROBOTICS SOCIETY believe in innovation through teamwork. One can be a
-          part of this enriching voyage either by volunteering into the team or
-          as an external member bonded by the urge to develop through
-          technology. 
-          </p>
-          <p>The aim is to build a community and technical hub where
-          teaching , training and research bind tech enthusiasts, to create a
-          better tomorrow. So come let’s innovate together !
+        </p>
+        <p>
+          {" "}
+          Robotics is an inter disciplinary field , so also ,we at KIIT ROBOTICS
+          SOCIETY believe in innovation through teamwork. One can be a part of
+          this enriching voyage either by volunteering into the team or as an
+          external member bonded by the urge to develop through technology.
+        </p>
+        <p>
+          The aim is to build a community and technical hub where teaching ,
+          training and research bind tech enthusiasts, to create a better
+          tomorrow. So come let’s innovate together !
         </p>
       </div>
     </div>
