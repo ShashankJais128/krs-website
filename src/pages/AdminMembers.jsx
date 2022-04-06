@@ -3,26 +3,70 @@ import { Link } from "react-router-dom";
 
 const memberCard = [
   {
-    name: "Shashank Jaiswal",
-    roll: "2005405"
+    firstname: "Shashank",
+    lastname: "Jaiswal",
+    domain: "web-dev",
+    roll: "2005405",
+    about: "qwerty",
+    linkedin: "a"
   },
   {
-    name: "Aditya",
-    roll: "2005401"
+    firstname: "Aditya",
+    lastname: "Ranjan",
+    domain: "web-dev",
+    roll: "2005415",
+    about: "qwerty1",
+    linkedin: "a1"
   },
   {
-    name: "Malvika",
-    roll: "2005402"
+    firstname: "Malvika",
+    lastname: "Madan",
+    domain: "web-dev",
+    roll: "2005435",
+    about: "qwerty2",
+    linkedin: "a2"
   },
   {
-    name: "Shyamal",
-    roll: "2005411"
+    firstname: "Shyamal",
+    lastname: "Madan",
+    domain: "web-dev",
+    roll: "2005235",
+    about: "qwerty12",
+    linkedin: "a12"
   }
 ]
 
 function AdminMembers() {
+  const [members, setMembers] = useState(memberCard)
   
-const [showModal, setShowModal] = useState(false)
+  const [mem, setMem] = useState({firstname: "", lastname: "", domain: "", roll: "", about: "", linkedin: ""})
+
+  //  add members
+  const addMember = () =>{
+
+  }
+  const handleClick = (e)=>{
+    e.preventDefault();
+    addMember(mem.firstname, mem.lastname, mem.domain, mem.roll, mem.about, mem.linkedin);
+    setMem({firstname: "", lastname: "", domain: "", roll: "", about: "", linkedin: ""})
+  }
+  const onChange = (e)=>{
+    setMem({...mem, [e.target.name]: e.target.value})
+  }
+  console.log(mem)
+
+  // deleting members
+  const deleteMember = (roll) => {
+    const newMembers = members.filter((member)=>{return member.roll!==roll})
+      setMembers(newMembers)
+      console.log(newMembers)
+  }
+
+  // editing members
+  
+
+  // modal state
+  const [showModal, setShowModal] = useState(false)
   return (
       
     <div className="flex-1 my-12 mx-20 justify-center items-center">
@@ -34,45 +78,45 @@ const [showModal, setShowModal] = useState(false)
               <div className='grid grid-cols-2'>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">First Name</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter first name' type="text" />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter first name' type="text" name='firstnme' value={mem.firstname} onChange={onChange} />
                 </div>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">Last Name</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter last name' type="text" />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter last name' type="text" name='lastname' value={mem.lastname} onChange={onChange} />
                 </div>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">Domain</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter domain' type="text" />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter domain' type="text" name='domain' value={mem.domain} onChange={onChange} />
                 </div>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">Roll Number</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter Roll no.' type="text" />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter Roll no.' type="text" name='roll' value={mem.roll} onChange={onChange} />
                 </div>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">About</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter About' type="text" />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter About' type="text" name='about' value={mem.about} onChange={onChange} />
                 </div>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">Linkdin</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter Linkedin link' type="text" />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter Linkedin link' type="text" name='linkedin' value={mem.linkedin} onChange={onChange} />
                 </div>
               </div>
               
-              <button className="text-2xl py-1.5 px-3 mx-1 my-6 bg-[#0C3EF1] rounded-lg text-white">Add member</button>
+              <button type="submit" onClick={handleClick} className="text-2xl py-1.5 px-3 mx-1 my-6 bg-[#0C3EF1] rounded-lg text-white">Add member</button>
             </div>
 
             {/* cards */}
             <div className='py-4'>
               <div className="grid grid-cols-3">
 
-                {memberCard.map(member => {
+                {members.map(member => {
                   return (
                     <div className="border-2 my-2 mx-8 p-2 rounded-lg bg-white">
-                      <h2 className="">{member.name}</h2> 
+                      <h2 className="">{member.firstname + " " + member.lastname}</h2> 
                       <div className="flex justify-between">
                         <h3 className="text-sm">{member.roll}</h3>
                         <div className="flex space-x-2">
-                          <Link className="" to=""><img src="" alt="dlt" /></Link>
+                          <Link className="" onClick={() => deleteMember(member.roll)} to=""><img src="" alt="dlt" /></Link>
                           <Link className="" onClick={() => setShowModal(true)} to=""><img src="" alt="edit" /></Link>      
                         </div>
                       </div>
