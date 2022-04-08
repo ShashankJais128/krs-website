@@ -31,7 +31,7 @@ function Navbar() {
                 </Link>
               </div>
               {/* primary nav */}
-              <div className="hidden md:flex items-center space-x-1 text-lg">
+              <div className="hidden lg:flex items-center space-x-1 text-lg">
                 <Link
                   to="/"
                   className="py-5 px-3 text-gray-700 hover:text-black hover:underline hover:underline-offset-2"
@@ -83,7 +83,7 @@ function Navbar() {
               </div>
             </div>
             {/* secondary nav */}
-            <div className="hidden md:flex text-gray-700 items-center space-x-1 text-lg">
+            <div className="hidden lg:flex text-gray-700 items-center space-x-1 text-lg">
               <Link
                 to="/signup"
                 className="py-2 px-3 hover:text-black border-2 border-black hover:bg-gray-200 rounded transition duration-300"
@@ -92,16 +92,18 @@ function Navbar() {
               </Link>
             </div>
             {/* mobile button goes here */}
-            <div className="md:hidden flex items-center">
+            <div className="lg:hidden flex items-center">
               <button className="mobile-menu-button" onClick={menuClick}>
                 <img className="w-6 cursor-pointer" src={menu} alt="menu" />
               </button>
             </div>
           </div>
         </div>
+
+        
         {/* mobile menu */}
         <div
-          className={`mobile-menu  flex flex-col ${visible} bg-red-200 w-full h-[100vh] items-center absolute   md:hidden`}
+          className={`mobile-menu  flex flex-col ${visible} bg-red-200 w-full h-[100vh] items-center absolute   lg:hidden`}
         >
           <Link
             to="/"
