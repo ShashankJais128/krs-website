@@ -85,10 +85,10 @@ function Navbar() {
             {/* secondary nav */}
             <div className="hidden md:flex text-gray-700 items-center space-x-1 text-lg">
               <Link
-                to="/signup"
+                to="/signin"
                 className="py-2 px-3 hover:text-black border-2 border-black hover:bg-gray-200 rounded transition duration-300"
               >
-                Signup
+                Signin
               </Link>
             </div>
             {/* mobile button goes here */}
