@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import krslogo from "./krslogo.jpg";
-import menu from "./menuicon.png";
+import krslogo from "../components/public/images/krslogo.jpg";
+import menu from "../components/public/images/menuicon.png";
 
 function Navbar() {
   const [visible, setVisible] = useState("right-[100%]");

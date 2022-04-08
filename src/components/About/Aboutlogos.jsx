@@ -1,7 +1,7 @@
 import react from "react";
-import krslogo from "../../pages/krslogo.jpg";
-import kiitlogo from "../../pages/kiitlogo.jpg";
-import ksaclogo from "../../pages/ksaclogo.png";
+import krslogo from "../public/images/krslogo.jpg";
+import kiitlogo from "../public/images/kiitlogo.jpg";
+import ksaclogo from "../public/images/ksaclogo.png";
 
 function Aboutlogos(){
 

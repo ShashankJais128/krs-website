@@ -1,9 +1,15 @@
 import Line from "./Line";
 function AboutText(props) {
   return (
+    // <div className="border-solid border-black border ">
     <div>
-      <div>
-        <p>
+      
+      <div className="container flex flex-col items-center text-left md px-30  bg-slate 50 ">
+      <text className="font-serif text-3xl">About KIIT Robotics Society</text>
+      <br></br>
+        <Line color="black" width="50%"/>
+        <br></br>
+        <p className="px-0.5">
           {" "}
           The concept and creation of manual and autonomous machines dated way
           back to the early centuries. However credible research into the
@@ -43,14 +49,18 @@ function AboutText(props) {
         </p>
       </div>
 
-      <Line color="black"/>
+      <br></br>
 
-      <div>
+      <div className="container flex flex-col items-center md px-56 bg-slate-100 ">
+        <br></br>
+        <Line color="black" width="70%" />
+        <br></br>
         <p>
           The primary objective of the society is to promote and empower
           research and development in robotics and all other trending technical
           fields.
         </p>
+        <br></br>
         <p>
           {" "}
           Robotics is an inter disciplinary field , so also ,we at KIIT ROBOTICS
@@ -58,11 +68,13 @@ function AboutText(props) {
           this enriching voyage either by volunteering into the team or as an
           external member bonded by the urge to develop through technology.
         </p>
+        <br></br>
         <p>
           The aim is to build a community and technical hub where teaching ,
           training and research bind tech enthusiasts, to create a better
           tomorrow. So come let’s innovate together !
         </p>
+        <br></br>
       </div>
     </div>
   );
