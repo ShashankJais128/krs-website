@@ -37,18 +37,14 @@ const memberCard = [
 ]
 
 function AdminMembers() {
-  const [members, setMembers] = useState(memberCard)
-  
+  const [members, setMembers] = useState(memberCard)  
   const [mem, setMem] = useState({firstname: "", lastname: "", domain: "", roll: "", about: "", linkedin: ""})
 
   //  add members
-  const addMember = () =>{
-
-  }
   const handleClick = (e)=>{
     e.preventDefault();
-    addMember(mem.firstname, mem.lastname, mem.domain, mem.roll, mem.about, mem.linkedin);
     setMem({firstname: "", lastname: "", domain: "", roll: "", about: "", linkedin: ""})
+    setMembers(members.concat(mem))
   }
   const onChange = (e)=>{
     setMem({...mem, [e.target.name]: e.target.value})
@@ -78,7 +74,7 @@ function AdminMembers() {
               <div className='grid grid-cols-2'>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">First Name</h2>
-                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter first name' type="text" name='firstnme' value={mem.firstname} onChange={onChange} />
+                  <input className="text-lg w-full py-0.5 px-1 mx-1 rounded" placeholder='Enter first name' type="text" name='firstname' value={mem.firstname} onChange={onChange} />
                 </div>
                 <div className="py-2 px-4">
                   <h2 className="text-xl p-1 my-1 text-white">Last Name</h2>

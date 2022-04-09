@@ -78,11 +78,11 @@ const webdevRecruit = [
 function Recruitment() {
   return (
     <div>
-      <h1 className="mx-24 pt-16 font-bold text-4xl ">Recruitment 2021</h1>
-      <hr className="mx-24 mt-2 border-t-2 border-black" />
-      <p className="mx-24 pt-4 font-semibold text-xl">We extend our heartliest welcome to all our new members!!!</p>
+      <h1 className="mx-10 md:mx-24 pt-16 font-bold text-4xl ">Recruitment 2021</h1>
+      <hr className="mx-10 md:mx-24 mt-2 border-t-2 border-black" />
+      <p className="mx-10 md:mx-24 pt-4 font-semibold text-xl">We extend our heartliest welcome to all our new members!!!</p>
 
-      <div className="py-16 mx-28 px-24">
+      <div className="py-16 mx-10 md:mx-14 lg:mx-28 px-5 md:px-20 lg:px-24">
         {/* robotics */}
         <h2 className="font-bold text-xl pt-8 pb-2">Robotics</h2>
         <table className="w-full table-auto">

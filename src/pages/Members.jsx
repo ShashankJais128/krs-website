@@ -63,16 +63,16 @@ const memberCard = [
 function Members() {
   return (
     <div className="">
-      <h1 className="mx-24 pt-16 font-bold text-4xl text-center">
+      <h1 className="mx-10 sm:mx-24 pt-16 font-bold text-4xl text-center">
         KIIT ROBOTICS SOCIETY
       </h1>
-      <hr className="mx-24 mt-2 border-t-2 border-black" />
-      <p className="mx-24 pt-4 font-semibold text-2xl text-center">
+      <hr className="mx-10 sm:mx-24 mt-2 border-t-2 border-black" />
+      <p className="mx-10 sm:mx-24 pt-4 font-semibold text-2xl text-center">
         Presents the Family
       </p>
 
-      <div className="py-16 mx-24">
-        <div className="grid grid-cols-4 items-center justify-center">
+      <div className="py-16 mx-5 sm:mx-24">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 items-center justify-center">
 
           {memberCard.map(memberCard => {
             return (

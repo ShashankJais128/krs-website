@@ -25,11 +25,11 @@ function Credits() {
   return (
 
     <div className="">
-        <h1 className="mx-24 pt-16 font-bold text-4xl ">Credits</h1>
-        <hr className="mx-24 mt-2 border-t-2 border-black" />
+        <h1 className="mx-10 sm:mx-24 pt-16 font-bold text-4xl ">Credits</h1>
+        <hr className="mx-10 sm:mx-24 mt-2 border-t-2 border-black" />
 
-        <div className="py-16 mx-24">
-            <div className="grid grid-cols-2">
+        <div className="py-16 mx-5 sm:mx-24">
+            <div className="grid grid-cols-1 lg:grid-cols-2">
               {creditsCard.map(credit => {
                 return (
                   <div className='flex flex-col items-center py-8'>
