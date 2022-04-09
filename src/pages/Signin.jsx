@@ -52,13 +52,15 @@ function Signin() {
 
   // JSX code for login form
   const renderForm = (
+    <div className="flex justify-center">
     <div className="w-full max-w-xs ">
-      <text className="block text-black text-xl font-bold mb-2 text-center">SIGN-IN</text>
-      <Line color="black" width="60%" />
+      <text className="block text-black text-3xl font-bold mb-2 text-center">Sign in</text>
+      <br></br>
+      <Line color="black" width="100%" />
       <br></br>
       <form
         onSubmit={handleSubmit}
-        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+        className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 my-5"
       >
         
         <div className="mb-4">
@@ -100,6 +102,7 @@ function Signin() {
           </a>
         </div>
       </form>
+    </div>
     </div>
   );
 
